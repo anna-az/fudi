@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet/less" type="text/css" href="styles/style.less" />
+        <link rel="stylesheet/less" type="text/css" href="styles/mobile.less" />
+        <link rel="stylesheet/less" type="text/css" href="styles/hamburger_menu.less" />
+        <link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick-theme.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/logo_icon.png">
+        <script src="less.js-master/dist/less.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="/slick-1.8.1/slick/slick.min.js"></script>
+
+        <title>Fudi</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href=""><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu">
+                <a href="#" class="login">Log in</a>
+                <a href="#" class="signup">Sign up</a>
+                <button class="c-hamburger c-hamburger--htx" id="menu_icon_container">
+                    <span></span>
+                </button>
+            </div>
+        </header>
+        <menu class="hamburger-menu">
+            <ul class="menu_ul">
+                <li><a href="#">Get started</a></li>
+                <li><a href="#about">Fudi App</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#reserv">Cuisines</a></li>
+                <li class="hidden_li" id="margin_top"><a href="#reserv" class="login">Log in</a></li>
+                <li class="hidden_li"><a href="#reserv" class="signup">Sign up</a></li>
+            </ul>
+        </menu>
+        <main>
+            <div class="banner">
+                <div class="container">
+                    <h2>Find your Favorite</h2>
+                    <h1>RECIPES</h1>
+                    <a href="#" class="login" id="get_started">Get started</a>
+                    <p>OR SEND US YOUR OWN RECIPES AND <a href="#">GET REWARDED!</a></p>
+                </div>
+            </div>
+            <div class="advantages">
+                <div class="advantages_item">
+                    <div class="circle">
+                        <img src="images/advantage_1.png" alt="Burger">
+                    </div>
+                    <p class="advantage_title">GET INSPIRED</p>
+                    <hr>
+                    <p class="advantage_content">Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat. </p>
+                </div>
+                <div class="advantages_item">
+                    <div class="circle">
+                        <img src="images/advantage_2.png" alt="Burger">
+                    </div>
+                    <p class="advantage_title">GET REWARDED</p>
+                    <hr>
+                    <p class="advantage_content">Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat. </p>
+                </div>
+                <div class="advantages_item">
+                    <div class="circle">
+                        <img src="images/advantage_3.png" alt="Burger">
+                    </div>
+                    <p class="advantage_title">GET SOCIAL</p>
+                    <hr>
+                    <p class="advantage_content">Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat. </p>
+                </div>
+            </div>
+            <div class="introducing">
+                <div class="introducing_img">
+                    <img src="images/iphone.png" alt="Mobile App" class="app">
+                </div>
+                <div class="introducing_text">
+                    <p class="introducing_title">INTRODUCING THE FUDI APP</p>
+                    <hr>
+                    <p class="introducing_content">Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet 
+                        felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest
+                        ibulum tristique. Suspendisse tristique lacus ac mattis porta. 
+                    </p>
+                    <p class="introducing_content">   
+                        Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In 
+                        libero dui, eleifend eu nisi id, egestas fringilla odio. In varius quam a mas
+                        sa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis. 
+                        Aenean tempus ligula ac odio rhoncus, quis aliquam dolor accumsan. 
+                    </p>
+                    <p class="introducing_content"> 
+                        Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam 
+                        malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultrices 
+                        ante, a mattis massa. 
+                    </p>
+                    <div class="download">
+                        <a href="#"  class="download_img">
+                            <img src="images/google_play.png" alt="Google Play">
+                        </a>
+                        <a href="#"  class="download_img">
+                            <img src="images/app_store.png" alt="App Store" class="download_img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider multiple-items">
+            </div>
+            <div class="restaurants">
+                <p class="restaurants_title">BROWSE BY CUISINES</p>
+                <hr>
+                <div class="sort">
+                    <p>Sort by: </p>
+                    <select class="sort_by">
+                        <option value="relevance">Relevance</option>
+                        <option value="desc">Recipes &#129043;</option>
+                        <option value="asc">Recipes &#129041;</option>
+                    </select>
+                </div>
+                <div class="cuisine_container"></div>
+            </div>
+            <div class="numbers">
+                <div class="numbers_item">
+                    <p class="dinamic_number"></p>
+                    <p class="numbers_text">Recipes Available</p>
+                </div>
+                <div class="numbers_item">
+                    <p class="dinamic_number"></p>
+                    <p class="numbers_text">Active Users</p>
+                </div>
+                <div class="numbers_item">
+                    <p class="dinamic_number"></p>
+                    <p class="numbers_text">Positive Reviews</p>
+                </div>
+                <div class="numbers_item">
+                    <p class="dinamic_number"></p>
+                    <p class="numbers_text">Photos & Videos</p>
+                </div>
+                <div class="numbers_item">
+                    <p class="dinamic_number"></p>
+                    <p class="numbers_text">Spices and Herbs</p>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <div class="container">
+                <p class="footer_reservesd">©2014 Fudi. All Rights Reserved.</p>
+                <p class="design_by">DESIGN BY: <span>WWW.BEKADES.COM</span></p>
+            </div>
+        </footer>
+        <div class="modal_container"></div>
+
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/reviews.js"></script>
+        <script src="scripts/restaurants.js"></script>
+        <script src="scripts/numbers.js"></script>
+        <script src="scripts/modal.js"></script>
+        <script src="scripts/scroll.js"></script>
+    </body>
+</html>

@@ -1,0 +1,178 @@
+@import "constans.less";
+
+header {
+    @pagePadding: 40px;
+    @media (max-width: 700px) {
+        padding: @pagePadding;
+        .menu {
+            @media (max-width: 520px) {
+                justify-content: flex-end;
+                a {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    .container {
+        @media (max-width: 440px) {
+            h1 {
+                font-size: 8rem;
+                @media (max-width: 375px) {
+                    letter-spacing: 2px;
+                }
+            }
+            h2 {
+                font-size: 2.6rem;
+            }
+            #get_started {
+                padding: 20px 70px;
+            }
+            @media (max-width: 350px) {
+                h1 {
+                    font-size: 7rem;
+                    @media (max-width: 350px) {
+                        letter-spacing: 0;
+                        font-size: 6rem;
+                    }
+                }
+                #get_started {
+                    padding: 15px 60px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.advantages {
+    @pagePadding: 40px; 
+    @media (max-width: 1500px) {
+        padding: @pagePadding;
+        @media (max-width: 630px) {
+            #flex.col();
+            .advantages_item {
+                margin: 20px 15px;
+            }
+        }
+    }
+}
+
+.introducing {
+    @pagePadding: 40px;
+    @media (max-width: 1000px) {
+        padding: @pagePadding;
+        padding-bottom: 0;
+        @media (max-width: 885px) {
+            #flex.center();
+            flex-direction: column-reverse;
+            .introducing_img {
+                width: 380px;
+                @media (max-width: 400px) {
+                    width: 100%;
+                }
+            }
+            .introducing_text {
+                #flex.col();
+                #flex.center();
+                width: 100%;
+                max-width: 100%;    
+                text-align: center;
+                margin-bottom: 60px;
+                .introducing_title {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+.slider {
+    .review {
+        @padePadding: 40px;
+        @media (max-width: 885px) {
+            padding: 0px @padePadding;
+        }
+    }
+}
+
+.restaurants {   
+    .cuisine_item {
+        @media (max-width: 1200px) {
+            width: calc(100% / (@cuisinesInRow - 1));
+            @media (max-width: 950px) {
+                width: calc(100% / (@cuisinesInRow - 2));
+                @media (max-width: 750px) {
+                    width: calc(100% / (@cuisinesInRow - 3));
+                    @media (max-width: 500px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.numbers {
+    @pagePadding: 40px; 
+    @media (max-width: 1000px) {
+        padding: 60px @pagePadding;
+        @media (max-width: 840px) {
+            display: block;
+            text-align: center;
+            .numbers_item {
+                display: inline-block;
+                width: calc((100% - @pagePadding * 2) / 3);
+                margin: 10px;
+                @media (max-width: 600px) {
+                    width: calc((100% - @pagePadding * 2) / 2);
+                    @media (max-width: 600px) {
+                        width: calc((100% - @pagePadding * 2) / 2);
+                        @media (max-width: 450px) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .container {
+        @pagePadding: 40px; 
+        @media (max-width: 800px) {
+            padding: 40px @pagePadding;
+            @media (max-width: 550px) {
+                #flex.col();
+                padding: 20px @pagePadding;
+            }
+        }
+    }
+}
+
+.hamburger-menu {
+    @pagePadding: 40px;
+    @burgerMenuWidth: @menuWidth + @pagePadding + @menuUlPadding;
+    @media (max-width: 700px) {    
+        max-width: @burgerMenuWidth;
+        @media (max-width: 520px) {
+            max-width: 100%;
+            .menu_ul {
+                .hidden_li {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    .form {
+        @media (max-width: 450px) {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@import "constans.less";
+
+.c-hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 14px;
+    height: 12px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    span {
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 0px;
+        right: 0px;
+        height: 2px;
+        background: #fff;
+        &::before, &::after {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            content: "";
+        }
+        &::before {
+            top: -4px;
+        }
+        &::after {
+            bottom: -4px;
+        }
+    }
+    &:focus {
+        outline: none;
+      }
+  }
+
+.c-hamburger--htx {
+    background-color: transparent;
+    span {
+        transition: background 0s 0.3s;
+        &::before, &::after {
+            transition-duration: 0.3s, 0.3s;
+            transition-delay: 0.3s, 0s;
+        }
+        &::before {
+            transition-property: top, transform;
+        }
+        &::after {
+            transition-property: bottom, transform;
+        }
+    }
+}
+
+.is-active {
+    background-color: transparent;
+    span {
+        background: none;
+        &::before, &::after {
+            transition-delay: 0s, 0.3s;
+            background: #fff;
+        }
+        &::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+        &::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    z-index: 90;
+    padding: 0;
+    height: 100%;
+    width: @burgerMenuWidth;
+    background-color: rgba(246, 150, 121, 0.9);
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    margin: 0;
+    ul {
+        margin-top: 110px;
+        width: 100%;
+        padding: 0 @menuUlPadding;
+        li {
+            list-style-type: none;
+            margin: 10px 0;
+            text-align: left;
+            width: 100%;
+            transition:  padding-left linear 0.2s;
+            &:hover {
+                padding-left: 5px;
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+                width: 100%;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+        }
+        .hidden_li {
+            display: none;
+        }
+        #margin_top {
+            margin-top: 30px;
+        }
+    }
+}
