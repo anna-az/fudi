@@ -4,11 +4,14 @@ const headerMenu = document.querySelector('.menu');
 const mobileWidth = 520;
 
 button.addEventListener('click', checkMenu);
+menu.querySelectorAll('a[href^="#"').forEach(link => {
+    link.addEventListener('click', scrollTo);
+});
 
 function checkMenu(event) {
     event.preventDefault();
-    menu.classList.contains('active-menu') ? closeMenu() : showMenu();
-    menu.classList.toggle('active-menu');
+    menu.classList.contains('is-active') ? closeMenu() : showMenu();
+    menu.classList.toggle('is-active');
 }
 
 function showMenu() {
@@ -45,3 +48,37 @@ function closeMenu() {
         }
     }, 5);
 }
+
+function scrollTo(event) {
+    event.preventDefault();
+        closeMenu();
+        button.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+        let href = this.getAttribute('href').substring(1);
+        const scrollTarget = document.getElementById(href);
+        const topOffset = document.querySelector('header').offsetHeight;
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+}
+
+(function() {
+    const toggles = document.querySelectorAll(".c-hamburger");
+
+    for (let i = toggles.length - 1; i >= 0; i--) {
+      let toggle = toggles[i];
+      toggleHandler(toggle);
+    };
+   
+    function toggleHandler(toggle) {
+      toggle.addEventListener( "click", function(e) {
+        e.preventDefault();
+        this.classList.toggle("is-active");
+      });
+    }
+   
+})();
