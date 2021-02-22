@@ -1,10 +1,5 @@
 import {modalContainer} from './constans.js';
 
-// openModelLogIn.forEach(element => element.addEventListener('click', chooseModal));
-// openModelSignUp.forEach(element => element.addEventListener('click', chooseModal));
-
-// modalContainer.addEventListener('click', checkClickOutside);
-
 function createModal(modalType) {
     let modal; 
     if (modalType === 'login') {
@@ -49,7 +44,6 @@ function createModal(modalType) {
             </div>`;
 
     return modal;
-
 }
 
 export function chooseModal(event) {
@@ -74,8 +68,8 @@ function openModal(modal, modalType) {
     } else {
         change = document.querySelector('#toLogIn');
     }
-    change.addEventListener('click', changeModal);
 
+    change.addEventListener('click', changeModal);
 }
 
 function sendData(event) {

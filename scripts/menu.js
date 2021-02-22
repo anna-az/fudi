@@ -1,10 +1,5 @@
 import { button, menu, headerMenu, mobileWidth} from './constans.js';
 
-// button.addEventListener('click', checkMenu);
-// menu.querySelectorAll('a[href^="#"').forEach(link => {
-//     link.addEventListener('click', scrollTo);
-// });
-
 export function checkMenu(event) {
     event.preventDefault();
     menu.classList.contains('is-active') ? closeMenu() : showMenu();
@@ -76,6 +71,5 @@ export function scrollTo(event) {
         e.preventDefault();
         this.classList.toggle("is-active");
       });
-    }
-   
+    } 
 })();

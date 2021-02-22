@@ -13,7 +13,6 @@ import {chooseModal, checkClickOutside} from './modal.js';
 import {sortCuisines, showCuisines} from './restaurants.js';
 import {scrollBy} from './scroll.js'
 
-
 button.addEventListener('click', checkMenu);
 
 menu.querySelectorAll('a[href^="#"').forEach(link => {

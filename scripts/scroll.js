@@ -18,8 +18,7 @@ export function scrollBy() {
     const scrollToElem = numbersPosition + 100;
     const windowHeight = document.documentElement.clientHeight;
     
-    if(windowHeight > scrollToElem) {        
-        if(alreadyNumbersAdded) return;
+    if(windowHeight > scrollToElem && !alreadyNumbersAdded) {        
         calcNumbers(1, 23567);
         calcNumbers(2, 431729);
         calcNumbers(3, 892173);

@@ -25,8 +25,6 @@ const sortBy = document.querySelector('.sort_by');
 
 const footer = document.querySelector('header');
 const numbersContainer = document.querySelector('.numbers');
-// let isCalculated = false;
-
 
 export {
     button,
@@ -41,5 +39,5 @@ export {
     container,
     sortBy,
     footer,
-    numbersContainer    // isCalculated,
+    numbersContainer
 }
