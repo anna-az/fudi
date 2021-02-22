@@ -1,11 +1,9 @@
-const openModelLogIn = document.querySelectorAll('.login');
-const openModelSignUp = document.querySelectorAll('.signup');
-const modalContainer = document.querySelector('.modal_container');
+import {modalContainer} from './constans.js';
 
-openModelLogIn.forEach(element => element.addEventListener('click', chooseModal));
-openModelSignUp.forEach(element => element.addEventListener('click', chooseModal));
+// openModelLogIn.forEach(element => element.addEventListener('click', chooseModal));
+// openModelSignUp.forEach(element => element.addEventListener('click', chooseModal));
 
-modalContainer.addEventListener('click', checkClickOutside);
+// modalContainer.addEventListener('click', checkClickOutside);
 
 function createModal(modalType) {
     let modal; 
@@ -54,7 +52,7 @@ function createModal(modalType) {
 
 }
 
-function chooseModal(event) {
+export function chooseModal(event) {
     event.preventDefault();
     const modal = createModal(event.target.className);
     openModal(modal, event.target.className);
@@ -105,7 +103,7 @@ function changeModal(event) {
     openModal(modal, modalType);    
 }
 
-function checkClickOutside(event) {
+export function checkClickOutside(event) {
     if (event.target.className !== 'modal') return;
     closeModal(); 
 }

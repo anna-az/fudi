@@ -1,14 +1,11 @@
-const button = document.querySelector('#menu_icon_container');
-const menu = document.querySelector('.hamburger-menu');
-const headerMenu = document.querySelector('.menu');
-const mobileWidth = 520;
+import { button, menu, headerMenu, mobileWidth} from './constans.js';
 
-button.addEventListener('click', checkMenu);
-menu.querySelectorAll('a[href^="#"').forEach(link => {
-    link.addEventListener('click', scrollTo);
-});
+// button.addEventListener('click', checkMenu);
+// menu.querySelectorAll('a[href^="#"').forEach(link => {
+//     link.addEventListener('click', scrollTo);
+// });
 
-function checkMenu(event) {
+export function checkMenu(event) {
     event.preventDefault();
     menu.classList.contains('is-active') ? closeMenu() : showMenu();
     menu.classList.toggle('is-active');
@@ -49,7 +46,7 @@ function closeMenu() {
     }, 5);
 }
 
-function scrollTo(event) {
+export function scrollTo(event) {
     event.preventDefault();
         closeMenu();
         button.classList.toggle('is-active');

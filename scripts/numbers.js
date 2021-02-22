@@ -1,4 +1,4 @@
-function calcNumbers(child, number) {
+export function calcNumbers(child, number) {
     const numberContainer = document.querySelector(`.numbers_item:nth-child(${child})`);
     const p = numberContainer.querySelector('.dinamic_number');
 

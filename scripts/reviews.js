@@ -19,6 +19,7 @@ const reviews = [
     }
 ];
 
+
 reviews.forEach(addReview);
 
 function addReview(item) {
