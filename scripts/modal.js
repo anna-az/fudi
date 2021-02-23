@@ -1,49 +1,7 @@
-import {modalContainer} from './constans.js';
+import {modalContainer, loginModalContent, registrationModalContent} from './constans.js';
 
 function createModal(modalType) {
-    let modal; 
-    if (modalType === 'login') {
-        modal = `<div class="modal">
-                    <div class="form flex_col">
-                        <div class="close_modal">
-                            <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        </div>
-                        <div class="modal_title">
-                            <img src="images/logo.png" alt="Logo">
-                            <p>LOG-IN</p>
-                        </div>
-                        <form class="reserv_form_modal" id="form">
-                            <input type="text" placeholder="Username or email" name="email" required>
-                            <input type="password" placeholder="password" name = "password" required>
-                            <button type="submit" class="reservation">Log-in</button>
-                        </form>
-                        <p>Don't have an account? <a href="#" id="toSignUp">Sign up</a></p>
-                    </div>
-                </div>`;
-
-        return modal;
-    }
-
-    modal = `<div class="modal">
-                <div class="form flex_col">
-                    <div class="close_modal">
-                        <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    </div>
-                    <div class="modal_title">
-                        <img src="images/logo.png" alt="Logo">
-                        <p>Sign-up</p>
-                    </div>
-                    <form class="reserv_form_modal" id="form">
-                        <input type="text" placeholder="Username" name="username" required>
-                        <input type="email" placeholder="Email" name="email" required>
-                        <input type="password" placeholder="password" name = "password" required>
-                        <button type="submit" class="reservation">sign up</button>
-                    </form>
-                    <p>If you already have an account <a href="#" id="toLogIn">Log in</a></p>
-                </div>
-            </div>`;
-
-    return modal;
+    return modalType === "login" ? loginModalContent : registrationModalContent;
 }
 
 export function chooseModal(event) {
@@ -61,13 +19,7 @@ function openModal(modal, modalType) {
     const submit = document.querySelector('.form');
     submit.addEventListener('submit', sendData);
 
-    let change;
-
-    if(modalType === 'login') {
-        change = document.querySelector('#toSignUp');
-    } else {
-        change = document.querySelector('#toLogIn');
-    }
+    const change = (modalType === 'login') ? document.querySelector('#toSignUp') : document.querySelector('#toLogIn'); 
 
     change.addEventListener('click', changeModal);
 }

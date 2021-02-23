@@ -5,7 +5,7 @@ import {
     openModelSignUp, 
     modalContainer, 
     sortBy, 
-    restaurants
+    restaurants,
 } from './constans.js';
 
 import {checkMenu, scrollTo} from './menu.js';

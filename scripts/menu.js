@@ -59,12 +59,7 @@ export function scrollTo(event) {
 }
 
 (function() {
-    const toggles = document.querySelectorAll(".c-hamburger");
-
-    for (let i = toggles.length - 1; i >= 0; i--) {
-      let toggle = toggles[i];
-      toggleHandler(toggle);
-    };
+    document.querySelectorAll(".c-hamburger").forEach(toggleHandler);
    
     function toggleHandler(toggle) {
       toggle.addEventListener( "click", function(e) {

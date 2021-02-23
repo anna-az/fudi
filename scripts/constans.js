@@ -26,6 +26,44 @@ const sortBy = document.querySelector('.sort_by');
 const footer = document.querySelector('header');
 const numbersContainer = document.querySelector('.numbers');
 
+const loginModalContent = `<div class="modal">
+<div class="form flex_col">
+    <div class="close_modal">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </div>
+    <div class="modal_title">
+        <img src="images/logo.png" alt="Logo">
+        <p>LOG-IN</p>
+    </div>
+    <form class="reserv_form_modal" id="form">
+        <input type="text" placeholder="Username or email" name="email" required>
+        <input type="password" placeholder="password" name = "password" required>
+        <button type="submit" class="reservation">Log-in</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="toSignUp">Sign up</a></p>
+</div>
+</div>`;
+
+const registrationModalContent = `<div class="modal">
+<div class="form flex_col">
+    <div class="close_modal">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </div>
+    <div class="modal_title">
+        <img src="images/logo.png" alt="Logo">
+        <p>Sign-up</p>
+    </div>
+    <form class="reserv_form_modal" id="form">
+        <input type="text" placeholder="Username" name="username" required>
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="password" placeholder="password" name = "password" required>
+        <button type="submit" class="reservation">sign up</button>
+    </form>
+    <p>If you already have an account <a href="#" id="toLogIn">Log in</a></p>
+</div>
+</div>`;
+
+
 export {
     button,
     menu,
@@ -39,5 +77,7 @@ export {
     container,
     sortBy,
     footer,
-    numbersContainer
+    numbersContainer,
+    loginModalContent,
+    registrationModalContent
 }
