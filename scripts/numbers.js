@@ -1,6 +1,6 @@
 export function calcNumbers(child, number) {
     const numberContainer = document.querySelector(`.numbers_item:nth-child(${child})`);
-    const p = numberContainer.querySelector('.dinamic_number');
+    const dynamicNumber = numberContainer.querySelector('.dynamic_number');
 
     let shownNumber = 0;
     let addedNumber = Number((number / 100).toFixed());
@@ -8,12 +8,12 @@ export function calcNumbers(child, number) {
     let interval = setInterval(function() {
         if(shownNumber >= number) {
             clearInterval(interval);
-            p.innerText = number.toLocaleString('en');
+            dynamicNumber.innerText = number.toLocaleString('en');
 
             return;                    
         } 
 
-        p.innerText = shownNumber;
+        dynamicNumber.innerText = shownNumber;
         shownNumber+=addedNumber;  
     }, 20);
 }

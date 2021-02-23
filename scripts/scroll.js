@@ -1,10 +1,8 @@
-import {footer, numbersContainer} from './constans.js';
+import {footer, numbersContainer, dynamicNumber} from './constans.js';
 import {calcNumbers} from './numbers.js';
 
 export function scrollBy() {
-    let isCalculated = false;
-    const dinamicNumber = document.querySelectorAll('.dinamic_number');
-    const alreadyNumbersAdded = dinamicNumber[0].textContent;
+    const alreadyNumbersAdded = dynamicNumber[0].textContent;
     const addBackground = 100;
     const backgroundAdded = (footer.classList.value === 'background') ? true : false;
 

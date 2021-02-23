@@ -25,6 +25,7 @@ const sortBy = document.querySelector('.sort_by');
 
 const footer = document.querySelector('header');
 const numbersContainer = document.querySelector('.numbers');
+const dynamicNumber = document.querySelectorAll('.dynamic_number');
 
 const loginModalContent = `<div class="modal">
 <div class="form flex_col">
@@ -78,6 +79,7 @@ export {
     sortBy,
     footer,
     numbersContainer,
+    dynamicNumber,
     loginModalContent,
     registrationModalContent
 }
